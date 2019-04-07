@@ -1,0 +1,35 @@
+<h2>Your Gigs</h2>
+
+<div class="clr-row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngFor="let g of gigs">
+    <a routerLink="" (click)="selectGig(g)"  class="card clickable">
+      <div class="card-block">
+        <div class="card-media-block">
+          <img src="{{g.giphyUrl}}" alt="{{g.name}}" class="card-media-image">
+          <div class="card-media-description">
+            <span class="card-media-title">{{g.name}}</span>
+            <span class="card-media-text">{{g.status}}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<h2>Add a Gig</h2>
+
+<div class="clr-row">
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngFor="let s of suggestions">
+    <a routerLink="" (click)="addGig(s)"  class="card clickable">
+      <div class="card-block">
+        <div class="card-media-block">
+          <img src="{{s.giphyUrl}}" alt="{{s.name}}" class="card-media-image">
+          <div class="card-media-description">
+            <span class="card-media-title">{{s.name}}</span>
+            <span class="card-media-text">{{s.status}}</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

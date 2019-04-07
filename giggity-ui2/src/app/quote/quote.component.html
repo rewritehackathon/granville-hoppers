@@ -1,0 +1,45 @@
+<h1>Your Quotes</h1>
+<div class="row">
+  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" *ngFor="let q of quotes">
+    <a (click)="basic = true" class="card clickable">
+      <div class="card-img">
+        <img src="{{q.url}}" alt="{{q.companyName}}">
+      </div>
+      <div class="card-block">
+        <p class="card-text">
+          {{q.companyName}} - <b>{{q.price}}</b>
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+
+<clr-modal [(clrModalOpen)]="basic">
+  <h3 class="modal-title"></h3>
+  <div class="modal-body">
+    <h4>Vacation Rental Insurance</h4>
+    <br>
+    <b>What’s covered?</b>
+    <p>Vacation Rental insurance is purchased in addition to your homeowners policy,
+      and protects you and your home from “general” claims involving bodily injuries
+      and property damage up to $1,000,000
+    </p>
+    <br>
+    <ul>
+      <li>Building(s): special cause of loss with replacement cost valuation</li>
+      <li>Contents: special cause of loss with replacement cost valuation</li>
+      <li>Commercial general liability insurance coverage</li>
+      <li>Income Coverage: actual loss sustained business income coverage with no time limit</li>
+      <li>Liability coverage continued to amenities: swimming pools, hot tubs, watercraft, bicycles, docks, rec areas, + much more</li>
+      <li>Enhancement coverage: theft, damage to your rental caused by a guest, animal/pet liability + more</li>
+      <li>No standard occupancy restrictions; designed for short-term rentals</li>
+    </ul>
+    <p>
+      <b>Premium:</b> 83¢ per 24 hours
+    </p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" (click)="buyPolicy()">Purchase</button>
+    <button type="button" class="btn btn-secondary" (click)="saveQuote()">Save Quote</button>
+  </div>
+</clr-modal>
