@@ -1,0 +1,4 @@
+com\granvillehoppers\model\Quote.class
+com\granvillehoppers\controller\HomeController.class
+com\granvillehoppers\model\Gig.class
+Application.class
